@@ -30,6 +30,24 @@ Json schema
 npm install jsonschema
 ```
 
+## UI
+
+Om de data te kunnen weergeven kunt u naar de endpoint /home gaan. Hier krijgt u een menu te zien waar u uit alle landen kunt kiezen, u krijgt dan alle GNI en GDP data van dit land te zien in 2 grafieken.
+
+```
+URL: http://localhost:3030/home/
+```
+
+## API starten
+
+Om de API te starten voert u het volgende commando uit:
+
+```
+node app.js
+```
+
+Hierbij is het van belang dat u zich bevindt in de terminal van de API map
+
 ## Database
 
 In het mapje database vindt u de gehele SQL file om de database te kunnen importeren, van belang is dat indien u een andere gebruikersnaam / wachtwoord heeft voor uw database deze worden aangepast in de CURD.js file. 
