@@ -30,9 +30,24 @@ router.get("/:id", async (req, res) => {
 
 router.get("/byCountryId/:id", async (req, res) => {
     let id = req.params.id;
+    let json = {
+        metaData: {
+
+        },
+        data: {
+
+        }
+    };
     try {
         let country = await crud.getByCountryId(id);
-        res.send(country);
+        for(row in country) {
+            if(row == "countryId" || row == "id") {
+                json.metaData[row] = country[row];
+            } else {
+                json.data[row] = country[row];
+            }
+        }
+        res.send(json);
     } catch(err) {
         res.statusMessage = err;
         res.status(400).send(err);

@@ -55,13 +55,13 @@ function setGniChart(gniMale, gniFemale) {
 function setGdpChart(gdpData) {
     let labels = [];
 
-    for(row in gdpData) {
+    for(row in gdpData.data) {
         labels.push(row);
     }
 
     let data = {
         gdp: {
-            data: gdpData,
+            data: gdpData.data,
             color: "rgb(255, 99, 132)",
             title: "Gdp"
         }
