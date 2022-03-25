@@ -1,36 +1,36 @@
 # ReadMe
 
-## Info
+# Info
 
 Deze API is geschreven in javascript met behulp van NodeJS, via NodeJS is er gebruik gemaakt van verschillende modules die kunnen worden geïnstalleerd doormiddel van NodeJS. Het project bestaat uit de API zelf en de database waarin alle informatie wordt opgeslagen. 
 
-## NodeJs
+# NodeJs
 
 Om NodeJs te installeren kunt u naar de volgende website gaan: https://nodejs.org/en/
 
-## NodeJs modules
+# NodeJs modules
 
 Om de modules te installeren moet u de volgende commando's uitvoeren in uw terminal.
 
-#### Express
+### Express
 
 ```
 npm install express
 ```
 
-Mysql
+### Mysql
 
 ```
 npm install mysql
 ```
 
-Json schema
+### Json schema
 
 ```
 npm install jsonschema
 ```
 
-## UI
+# UI
 
 Om de data te kunnen weergeven kunt u naar de endpoint /home gaan. Hier krijgt u een menu te zien waar u uit alle landen kunt kiezen, u krijgt dan alle GNI en GDP data van dit land te zien in 2 grafieken.
 
@@ -38,7 +38,7 @@ Om de data te kunnen weergeven kunt u naar de endpoint /home gaan. Hier krijgt u
 URL: http://localhost:3030/home/
 ```
 
-## API starten
+# API starten
 
 Om de API te starten voert u het volgende commando uit:
 
@@ -48,7 +48,7 @@ node app.js
 
 Hierbij is het van belang dat u zich bevindt in de terminal van de API map
 
-## Database
+# Database
 
 In het mapje database vindt u de gehele SQL file om de database te kunnen importeren, van belang is dat indien u een andere gebruikersnaam / wachtwoord heeft voor uw database deze worden aangepast in de CURD.js file. 
 
@@ -62,7 +62,7 @@ let con = sql.createConnection({
 });
 ```
 
-## Endpoints
+# Endpoints
 
 Voor de verschillende tabellen zijn verschillende endpoints gemaakt, hieronder vindt u deze en daarbij een JSON formaat die u kunt gebruiken in bijvoorbeeld postman om deze endpoints uit te testen
 
@@ -70,15 +70,15 @@ De URL van de server: http://localhost:3030
 
 Om naar een endpoint te kunnen callen moet de server URL voor de endpoint worden geplaatst.
 
-### Country
+## Country
 
-Get all countries
+### Get all countries 
 
 >ENDPOINT: /country/getAll
 >
 >REQUEST: GET
 
-Get country by id
+### Get country by id
 
 > ENDPOINT: /country/:id
 >
@@ -86,7 +86,7 @@ Get country by id
 >
 > PARAMS: id
 
-Add country
+### Add country
 
 > ENDPOINT: /country/add
 >
@@ -100,7 +100,7 @@ Add country
 > }
 > ```
 
-Update country
+### Update country
 
 > ENDPOINT: /country/update
 >
@@ -115,7 +115,7 @@ Update country
 > }
 > ```
 
-Delete country
+### Delete country
 
 > ENDPOINT: /country/delete/:id
 >
@@ -123,15 +123,15 @@ Delete country
 >
 > PARAMS: id
 
-### GniMale
+## GniMale
 
-Get all gniMaleData
+### Get all gniMaleData
 
 >ENDPOINT: /gniMale/getAll
 >
 >REQUEST: GET
 
-Get gniMaleData by Id
+### Get gniMaleData by Id
 
 > ENDPOINT: /gniMale/:id
 >
@@ -139,7 +139,7 @@ Get gniMaleData by Id
 >
 > PARAMS: id
 
-Get gniMaleData by countryId
+### Get gniMaleData by countryId
 
 > ENDPOINT: /gniMale/byCountryId/:id
 >
@@ -147,7 +147,7 @@ Get gniMaleData by countryId
 >
 > PARAMS: id
 
-Add gniMaleData
+### Add gniMaleData
 
 > ENDPOINT: /gniMale/add
 >
@@ -172,7 +172,7 @@ Add gniMaleData
 > }
 > ```
 
-Update gniMaleData
+### Update gniMaleData
 
 > ENDPOINT: /gniMale/update
 >
@@ -203,7 +203,7 @@ Update gniMaleData
 > 
 > ```
 
-Delete gniFemale
+### Delete gniFemale
 
 > ENDPOINT: /gniFemale/delete/:id
 >
@@ -211,15 +211,15 @@ Delete gniFemale
 >
 > PARAMS: id
 
-### GniFemale
+## GniFemale
 
-Get all gniFemaleData
+### Get all gniFemaleData
 
->ENDPOINT: /gniFemale/getAll
+> ENDPOINT: /gniFemale/getAll
 >
 >REQUEST: GET
 
-Get gniFemaleData by Id
+### Get gniFemaleData by Id
 
 > ENDPOINT: /gniFemale/:id
 >
@@ -227,7 +227,7 @@ Get gniFemaleData by Id
 >
 > PARAMS: id
 
-Get gniFemaleData by countryId
+### Get gniFemaleData by countryId
 
 > ENDPOINT: /gniFemale/byCountryId/:id
 >
@@ -235,7 +235,7 @@ Get gniFemaleData by countryId
 >
 > PARAMS: id
 
-Add gniFemaleData
+### Add gniFemaleData
 
 > ENDPOINT: /gniFemale/add
 >
@@ -260,7 +260,7 @@ Add gniFemaleData
 > }
 > ```
 
-Update gniFemaleData
+### Update gniFemaleData
 
 > ENDPOINT: /gniFemale/update
 >
@@ -291,7 +291,7 @@ Update gniFemaleData
 > 
 > ```
 
-Delete gniFemaleData
+### Delete gniFemaleData
 
 > ENDPOINT: /gniFemale/delete/:id
 >
@@ -299,15 +299,15 @@ Delete gniFemaleData
 >
 > PARAMS: id
 
-### GdpData
+## GdpData
 
-Get all gdpData
+### Get all gdpData
 
 >ENDPOINT: /gdp/getAll
 >
 >REQUEST: GET
 
-Get gdpData by Id
+### Get gdpData by Id
 
 > ENDPOINT: /gdp/:id
 >
@@ -315,7 +315,7 @@ Get gdpData by Id
 >
 > PARAMS: id
 
-Get gdpData by countryId
+### Get gdpData by countryId
 
 > ENDPOINT: /gdp/byCountryId/:id
 >
@@ -323,7 +323,7 @@ Get gdpData by countryId
 >
 > PARAMS: id
 
-Add gdpData
+### Add gdpData
 
 > ENDPOINT: /gdp/add
 >
@@ -349,7 +349,7 @@ Add gdpData
 > }
 > ```
 
-Update gdpData
+### Update gdpData
 
 > ENDPOINT: /gdp/update
 >
@@ -380,7 +380,7 @@ Update gdpData
 > }
 > ```
 
-Delete gdpData
+### Delete gdpData
 
 > ENDPOINT: /gdp/delete/:id
 >
@@ -388,6 +388,6 @@ Delete gdpData
 >
 > PARAMS: id
 
-## XML
+# XML
 
 Vanwege tijdsgebrek ben ik helaas niet aan toegekomen om alle XML goed af te kunnen handelen. Het is op het moment wel mogelijk om XML data naar de API op kunnen sturen, deze wordt alleen nu nog omgezet naar JSON en zo gevalideerd. De opgestuurde XML data wordt dus nog niet gevalideerd tegen een XSD schema maar tegen een JSON schema.
