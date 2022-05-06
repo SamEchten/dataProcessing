@@ -7,6 +7,7 @@ router.use(express.json());
 
 //Returns all countries in 1 json object
 router.get("/getAll/", async (req, res) => {
+    console.log(res.contentType);
     try {
         let result = await crud.getAll();
         res.send(result);
