@@ -2,7 +2,10 @@ const express = require("express");
 const app = express();
 const port = 3030;
 
+const xmlParser = require("express-xml-bodyparser");
+
 app.use("/static", express.static("public"));
+app.use(xmlParser());
 
 //Routes ->
 const countryRouter = require("./routes/countryRoute");

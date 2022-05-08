@@ -2,9 +2,6 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "properties": {
-    "countryId": {
-      "type": "integer"
-    },
     "1990": {
       "type": "integer"
     },
@@ -46,7 +43,6 @@
     }
   },
   "required": [
-    "countryId",
     "1990",
     "1995",
     "2000",

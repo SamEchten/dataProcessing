@@ -5,7 +5,6 @@
         <xs:element name="data">
           <xs:complexType>
             <xs:sequence>
-              <xs:element type="xs:short" name="_1990"/>
               <xs:element type="xs:short" name="_1995"/>
               <xs:element type="xs:short" name="_2000"/>
               <xs:element type="xs:short" name="_2005"/>

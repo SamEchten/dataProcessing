@@ -29,7 +29,7 @@ async function getById(sql, params) {
         con.query(sql, params, function(err, result) {
             //Error ->
             if(err) error("Something went wrong while getting the data from the database");
-            if(result.length == 0) error("No rows found with given id");
+            if(result.length == 0) error(404);
             
             //Result ->
             res(result[0]);
@@ -52,7 +52,6 @@ async function add(sql, params) {
 async function update(sql, params) {
     return new Promise((res, error) => {
         con.query(sql, params, function(err) {
-            console.log(err);
             //Error ->
             if(err) error("Something went wrong while updating data into database");
 

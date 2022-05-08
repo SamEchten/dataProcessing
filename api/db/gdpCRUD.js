@@ -30,7 +30,6 @@ async function getGdpDataByCountryId(id) {
 }
 
 async function addGdpData(body) {
-    console.log(body);
     let sql = "INSERT INTO gdptotalbycountry (`countryId`, `1990`, `1995`, `2000`, "+
     "`2005`, `2010`, `2011`, `2012`, `2013`, `2014`, `2015`, `2016`, `2017`, `2018`) "+
     "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -47,7 +46,6 @@ async function addGdpData(body) {
 }
 
 async function updateGdpData(id, data) {
-    console.log(id);
     let sql = "UPDATE gdptotalbycountry SET `countryId` = ?, `1990` = ?, `1995` = ?, `2000` = ?, "+
     "`2005` = ?, `2010` = ?, `2011` = ?, `2012` = ?, `2013` = ?, `2014` = ?, "+ 
     "`2015` = ?, `2016` = ?, `2017` = ?, `2018` = ?  WHERE id = ?";
@@ -57,7 +55,6 @@ async function updateGdpData(id, data) {
         if(data["data"] != "countryId") params.push(data["data"][item]);
     }
     params.push(id);
-    console.log(params);
 
     let result = await CRUD.update(sql, params);
     return new Promise(res => {
